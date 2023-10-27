@@ -14,7 +14,10 @@
 </head>
 
 <body class="scrollable-div">
-
+ <div id="loader">
+        LOADING YOUR EXPERIENCE &nbsp;
+        <div class="spinner"></div>
+    </div>
     <nav class="navbar scrollable-div">
         <div class="maintitle scrollable-div">
             <div class="title scrollable-div">Sushanth</div>
@@ -618,7 +621,37 @@
 
 
     </script>
+  <script>
+        // Select all the images on the page
+        const images = document.querySelectorAll('img');
 
+        // Initialize a counter to track loaded images
+        let imageLoadCount = 0;
+
+        // Function to hide the loading animation
+        function hideLoader() {
+            document.getElementById('loader').style.display = 'none';
+        }
+
+        // Function to track when an image is loaded
+        function imageLoaded() {
+            imageLoadCount++;
+            if (imageLoadCount === images.length) {
+                // All images have loaded, hide the loader
+                hideLoader();
+            }
+        }
+
+        // Loop through all images and attach the load event listener
+        images.forEach((image) => {
+            if (image.complete) {
+                // If the image is already loaded, increment the count
+                imageLoaded();
+            } else {
+                image.addEventListener('load', imageLoaded);
+            }
+        });
+    </script>
 </body>
 
 </html>

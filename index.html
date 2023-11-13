@@ -5,19 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sushanth-portfolio</title>
-       <link rel="icon" href="Sushanth-transformed-bw-png.png" type="icon/x-image">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" href="Sushanth-transformed-bw-png.png" type="icon/x-image">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
     <script src=""></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
 </head>
 
 <body class="scrollable-div">
- <div id="loader">
+    <div id="loader">
         LOADING YOUR UPCOMING EXPERIENCE &nbsp;
         <div class="spinner"></div>
     </div>
+
+
+
     <nav class="navbar scrollable-div">
         <div class="maintitle scrollable-div">
             <div class="title scrollable-div">Sushanth</div>
@@ -77,6 +84,7 @@
                 <div class="artround">
                     <div class="artround2"></div>
                 </div>
+
                 <div class="directionball"></div>
             </div>
         </div>
@@ -101,6 +109,10 @@
         </div>
     </div>
 
+
+    <div class="skillout">
+      
+    </div>
 
 
     <div class="projects">
@@ -175,7 +187,7 @@
             <div class="project-right">
                 <div class="project-thumb">
                     <div class="project-image">
-                        <img src="P21.png" alt="heat beat">
+                        <img src="p21.png" alt="heat beat">
                     </div>
 
                 </div>
@@ -302,7 +314,10 @@
     <div class="letstalkouter" id="contact">
         <div class="letstalk_container">
             <div class="letstalk_title_container">
-                <div class="letstalk_ball"></div>
+                <div class="letstalk_ball">
+                    <marquee direction="left">Valued Visitors:<span id="visits">3222</span></marquee> 
+                
+                </div>
                 <div class="letstalk"> LETS TALK </div>
             </div>
             <div class="letstalk-line"></div>
@@ -366,12 +381,64 @@
 
     </div>
 
+
+<div class="gohnadsfree">
+    <div class="gohandsfreein">
+        <div class="hands">Echo Guide</div>
+        <div class="gohandin">
+            <div class="mica"> <div class="micimg"><span class="material-symbols-outlined mic" onclick="voice()"> 
+                mic
+                </span> </div>
+                <div class="micbutton"> 
+                    <div class="bulb1 bulb" id="b1"></div>
+                    <div class="bulb2 bulb" id="b2"></div>
+                    <div class="bulb3 bulb" id="b3"></div>
+                    <div class="bulb4 bulb" id="b4"></div>
+                </div>
+                <div class="micname"><h5>Voice Navigation</h5></div>
+            </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="micinfo-right">
+<div class="info-out">
+    <div class="info-in" id="infoIn">
+        <div class="termination-symbol" onclick="removeInfo()"><span class="material-symbols-outlined close">
+            close
+            </span></div>
+        <h1>Echo Guide</h1>
+        <h4>Voice based navigation -try using commands</h4>
+        <div class="cmd1">say "Scroll down"</div>
+        <div class="cmd1">say "Who are you"</div>
+        <div class="cmd1">say "what can you do"</div>
+        <div class="cmd1">say "About"</div>
+        <div class="cmd1">say "Projects"</div>
+        <div class="cmd1">say "contact"</div>
+        <div class="byme">Created by : Sushanth</div>
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
     <div id="mode">
         <img src="moon.png" title="Light Theme" id="icon" onclick="toggleDarkMode()" alt="moon">
     </div>
-    <a href="#"  onclick="lenis.scrollTo('#')" class="scroll-to-top"><span class="material-symbols-outlined" title="move up">
+    <a href="#" onclick="lenis.scrollTo('#')" class="scroll-to-top"><span class="material-symbols-outlined"
+            title="move up">
             arrow_upward
         </span></a>
+
     <footer>
         <div class="footer_out">
             <div class="footer_in">
@@ -578,26 +645,26 @@
     </script>
 
 
-<script>
-    window.addEventListener('scroll', function() {
-        var scrollPosition = window.pageYOffset;
-        var scrollButton = document.querySelector('.scroll-to-top');
+    <script>
+        window.addEventListener('scroll', function () {
+            var scrollPosition = window.pageYOffset;
+            var scrollButton = document.querySelector('.scroll-to-top');
 
-        if (scrollPosition > 200) {
-            scrollButton.classList.add('show');
-        } else {
-            scrollButton.classList.remove('show');
-        }
-    });
-
-    document.querySelector('.scroll-to-top').addEventListener('click', function(event) {
-        event.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+            if (scrollPosition > 200) {
+                scrollButton.classList.add('show');
+            } else {
+                scrollButton.classList.remove('show');
+            }
         });
-    });
-</script>
+
+        document.querySelector('.scroll-to-top').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 
 
 
@@ -621,7 +688,7 @@
 
 
     </script>
-  <script>
+    <script>
         // Select all the images on the page
         const images = document.querySelectorAll('img');
 
@@ -629,14 +696,14 @@
         let imageLoadCount = 0;
 
         // Function to hide the loading animation
-      function hideLoader() {
-        // document.getElementById('loader').style.display = 'none';
-        loader.style.opacity = '0'; 
-    loader.style.transition = 'opacity 1s'; 
-    setTimeout(function () {
-        loader.style.display = 'none'; 
-    }, 1000); 
-    }
+        function hideLoader() {
+            // document.getElementById('loader').style.display = 'none';
+            loader.style.opacity = '0';
+            loader.style.transition = 'opacity 1s';
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 1000);
+        }
 
         // Function to track when an image is loaded
         function imageLoaded() {
@@ -657,6 +724,282 @@
             }
         });
     </script>
+
+
+
+
+
+
+
+
+<!-- //voice modules -->
+<script>
+    var micainfoValue = sessionStorage.getItem('micainfo');
+console.log('micainfo value:', micainfoValue);
+
+
+
+    function micinfo() {
+    sessionStorage.setItem('micainfo', 1);
+}
+</script>
+
+
+<script>
+    let quer = "";
+
+function voice() {
+    var audio = new Audio();
+    audio.src = 'assistant-2.mp3';
+    audio.play();
+
+
+    // guide only for new session user
+    var micainfoValue = sessionStorage.getItem('micainfo');
+    if( micainfoValue==null){
+    var infoIn = document.getElementById('infoIn');
+    infoIn.classList.add('show-info');
+    var audio = new Audio();
+    audio.src = 'echo-guide-total.mp3';
+    audio.play();
+    }
+
+
+// animation assistant on click
+var b1 = document.getElementById('b1');
+var b2 = document.getElementById('b2');
+var b3 = document.getElementById('b3');
+var b4 = document.getElementById('b4');
+    b1.classList.toggle('b1animation');
+    b2.classList.toggle('b2animation');
+    b3.classList.toggle('b3animation');
+    b4.classList.toggle('b4animation');
+    
+
+
+
+
+
+
+
+
+    sessionStorage.setItem('micainfo', 1);
+
+    // Request microphone permission only if not granted yet
+    if (quer === "") {
+        var recognition = new webkitSpeechRecognition();
+        recognition.lang = "en-GB";
+
+        recognition.onresult = function (event) {
+            console.log(event);
+            const transcript = event.results[0][0].transcript;
+            quer = transcript;
+            processText(quer);
+        };
+
+        recognition.onend = function () {
+            // Clear the transcript variable after processing
+            quer = "";
+        };
+
+        // Start speech recognition
+        recognition.start();
+    }
+
+
+// Example function to process the transcript
+function processText(transcript) {
+    console.log("Processing:", transcript);
+    // Implement your logic here based on the transcript
+}
+    
+        
+      
+    
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    
+    
+        function smoothScrollDown(duration) {
+            const targetPosition = document.body.scrollHeight;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+    
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+    
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+    
+            requestAnimationFrame(animation);
+        }
+    
+        function smoothScrollUp(duration) {
+            const targetPosition = 0;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+    
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+    
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+    
+            requestAnimationFrame(animation);
+        }
+    
+    
+    
+    
+        function processText(text) {
+            text = text.toLowerCase();
+            const setColorCommand = "set colour to";
+            const setColorCommand2 = "set background colour to"
+            const scrolldown = "scroll down";
+            const scrollup = "scroll up";
+            const projects = "projects";
+            const contact = "contact";
+            const about = "about";
+            const scroll= "scroll";
+            const changemode= "change mode";
+            const darkmode= "dark mode";
+            const whoru= "who are you";
+            const whatcanudo = "what can you do";
+         
+    
+            if (text.includes(setColorCommand)) {
+        var mycolor = text.replace(setColorCommand, '').replace('.', '').trim();
+        console.log('Color:', mycolor);
+        document.body.style.backgroundColor = mycolor;
+    } 
+    else if (text.includes(setColorCommand2)) {
+        var mycolor = text.replace(setColorCommand2, '').replace('.', '').trim();
+        console.log('Color:', mycolor);
+        document.body.style.backgroundColor = mycolor;
+    }
+    
+    
+            
+    
+           
+    
+            else if (text.includes(scrolldown)) {
+                smoothScrollDown(4000);
+            }
+            else if (text.includes(scrollup)) {
+                smoothScrollUp(4000);
+            }
+            else if (text.includes(projects)) {
+        scrollToSection("projects");
+        }
+
+        else if (text.includes(about)) {
+        scrollToSection("enigma");
+        }
+        else if (text.includes(contact)) {
+        scrollToSection("contact");
+        }
+    
+
+        else if (text.includes(darkmode)) {
+            toggleDarkMode();
+        }
+
+        else if (text.includes(changemode)) {
+            toggleDarkMode();
+        }
+        else if (text.includes(whoru)) {
+            var audio = new Audio();
+    audio.src = 'whoru.mp3';
+    audio.volume = 0.3;
+    audio.play();
+    audio.onended = function() {
+   voice();
+};
+        }
+        else if (text.includes(whatcanudo)) {
+            var audio = new Audio();
+    audio.src = 'whatcanudo.mp3';
+    audio.volume = 0.3;
+    audio.play();
+    audio.onended = function() {
+    voice();
+};
+        }
+
+
+
+
+        else if (text.includes(scroll)) {
+    // window.scrollBy(0, 100);
+    window.scrollBy({
+        top: window.innerHeight, 
+        behavior: 'smooth'
+    });
+        }
+        else{
+            var audio = new Audio();
+    audio.src = 'else.mp3';
+    audio.volume = 0.3;
+    audio.play();  
+        }
+    
+    
+     
+    
+        }
+    
+    
+    
+    
+    }
+    
+    
+    
+    
+        </script>
+
+
+
+
+
+
+
+
+<script>
+    // remove new user guide
+    function removeInfo() {
+    var infoIn = document.getElementById('infoIn');
+    infoIn.classList.remove('show-info');
+}
+</script>
+
+
+
 </body>
 
 </html>

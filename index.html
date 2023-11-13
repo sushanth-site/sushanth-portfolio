@@ -110,9 +110,37 @@
     </div>
 
 
-    <div class="skillout">
+    <div class="skillout" id="skills">
       <div class="skillin">
-        <div class="skilltitle"></div>
+        <div class="skilltitle">
+            <div class="skills">Skills Hub</div>
+        </div>
+
+        <div class="skillcontent">
+            <div class="skillrow">
+             <div class="sk1">HTML</div>
+             <div class="sk1">CSS</div>
+             <div class="sk1">Javascript</div>
+             <div class="sk1">Figma</div>
+             <div class="sk1">React</div>
+             <div class="sk1">SQL</div>
+            </div>
+            <div class="skillrow">
+                <div class="sk1">C</div>
+                <div class="sk1">C++</div>
+                <div class="sk1">Java</div>
+                <div class="sk1">Docker</div>
+                <div class="sk1">PHP</div>
+            </div>
+
+            <div class="skillrow">
+                <div class="sk1">Python</div>
+               
+            </div>
+
+            
+            
+        </div>
       </div>
     </div>
 
@@ -189,7 +217,7 @@
             <div class="project-right">
                 <div class="project-thumb">
                     <div class="project-image">
-                        <img src="P21.png" alt="heat beat">
+                        <img src="p21.png" alt="heat beat">
                     </div>
 
                 </div>
@@ -894,6 +922,7 @@ function processText(transcript) {
             const darkmode= "dark mode";
             const whoru= "who are you";
             const whatcanudo = "what can you do";
+            const skills= "skills";
          
     
             if (text.includes(setColorCommand)) {
@@ -949,6 +978,11 @@ function processText(transcript) {
     b4.classList.toggle('b4animation');
         }
     
+        else if (text.includes(skills)) {
+        scrollToSection("skills");
+        }
+
+
 
         else if (text.includes(darkmode)) {
             toggleDarkMode();

@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background-color: var(--primary-color);
+   background-color: var(--primary-color);
     margin: 0;
     padding: 0;
     transition: background-color 0.3s ease-out;
@@ -28,12 +28,14 @@ body {
 
 :root {
     --primary-color: #d9d9d9;
+    --colourful: linear-gradient(to right, #3498db, #2c3e50, #3498db, #87CEEB);
     /* --primary-color:#8f8f8f; */
     --secondary-color: black;
     --special: black;
     --ball: #151414;
     --contact:rgba(203, 201, 201, 0.825);
     --footer:rgba(0, 0, 0, 0.897);
+    --echoguidebg:#151414;
     /* #151414 */
 }
 
@@ -44,6 +46,8 @@ body {
     --ball: white;
     --contact:rgba(27, 27, 27, 0.77);
     --footer:#b4b4b4cb;
+ 
+    --echoguidebg:#c9c7c7;
 }
 
 nav {
@@ -57,7 +61,7 @@ nav {
     height: 90px;
     padding: 0 30px;
     justify-content: space-between;
-    border-bottom: 1px solid var(--secondary-color);
+    /* border-bottom: 1px solid var(--secondary-color); */
     /* font-family: 'Poppins', sans-serif; */
     font-family: 'Roboto', sans-serif;
     position: sticky;
@@ -213,6 +217,7 @@ nav ul li:hover {
     width: 400px;
     background-color: var(--primary-color);
     object-fit: cover;
+     border-radius: 50%;
 
 }
 
@@ -231,6 +236,7 @@ nav ul li:hover {
 .thumb img {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
 }
 
 
@@ -244,7 +250,7 @@ nav ul li:hover {
     z-index: 25;
     cursor: pointer;
     object-fit: cover;
-    background-color: var(--secondary-color);
+    /* background-color: var(--primary-color); */
     border-radius: 18%;
     transition: ease-out 0.3s;
 }
@@ -737,6 +743,38 @@ text {
     background-color: blue;
 
 } */
+
+.skillout{
+        height: 100vh;
+        width: 100%;
+        background-color: blue;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .sp0 {
     height: 25%;
     width: 100%;
@@ -1193,6 +1231,12 @@ width:100%;
     width:120px;
     border-radius: 50%;
     background-color: var(--secondary-color);
+    display: flex;
+    justify-content:  center;
+    align-items:  center;
+    word-wrap:break-word;
+    color:var(--primary-color);
+    perspective: 1em;
   }
   .letstalk-line{
     background-color: var(--secondary-color);
@@ -1422,6 +1466,12 @@ cursor: pointer;
   'GRAD' 0,
   'opsz' 40
 }
+/* optional */
+body::-webkit-scrollbar{
+ 
+ 
+  }
+
   #loader {
     position: fixed;
     top: 0;
@@ -1449,3 +1499,207 @@ cursor: pointer;
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.gohnadsfree{
+    height:2rem;
+    width:12rem;
+    /* background-color:var(--secondary-color); */
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+   
+    border-radius: 140px 140px 0 0; 
+   
+}
+
+.gohnadsfree:hover .gohandin{
+    transform: translateY(0);
+    cursor: pointer;
+}
+.gohandsfreein{
+    height:6rem;
+    width:12rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    border-radius: 140px 140px 0 0; 
+    
+}
+.hands{
+    height:2rem;
+    width:10rem;
+    background-color:var(--echoguidebg);
+    text-align: center;
+    color:var(--primary-color);
+    border-radius: 140px 140px 0 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gohandin{
+    height:6rem;
+    width: 12rem;
+    background-color: rgb(74, 105, 185);
+    border-radius: 140px 140px 0 0; 
+    right:0;
+    left:0;
+    position: absolute;
+    bottom: 0;
+    max-height:100%;
+    transform: translateY(101%);
+    transition:transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+}
+.mic{
+    font-variation-settings: 
+    'FILL' 10, 
+    'wght' 1000, 
+    'GRAD' 0, 
+    'opsz' 30;
+    color: var(--secondary-color);   
+}
+
+.mic:hover{
+    color:blue;
+}
+.micbutton{
+    height:1rem;
+    width:6.3rem;
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 4px;
+    display: flex;
+    padding: 5px;
+}
+.micimg{
+    display: flex;
+    justify-content: center;
+}
+.micname{
+    padding: 5px;
+    color: var(--secondary-color);
+}
+.bulb{
+    height:0.5em;
+    width:0.5em;
+    border-radius: 50%;
+    display:block;
+
+}
+.bulb1{
+    background-color:blue;
+  }
+  
+  .b1animation{
+    animation: bounce 1.2s .200s ease-in-out infinite;
+  }
+
+  .bulb2{
+    background-color:rgb(30, 255, 0);
+   
+  }
+  
+  .b2animation{
+    animation: bounce 1.2s .400s ease-in-out infinite;
+  }
+
+  .bulb3{
+    background-color:gold;
+  }
+  
+  .b3animation{
+    animation: bounce 1.2s .600s ease-in-out infinite;
+  }
+  .bulb4{
+    background-color:rgb(237, 72, 2);
+  }
+  .b4animation{
+    animation: bounce 1.2s .800s ease-in-out infinite;
+  }
+  
+  @keyframes bounce{
+    0%,75%,100%{
+      transform:translatey(0px);
+  }
+    25%{
+      transform:translatey(-7px);
+  }
+  }
+
+  .micinfo-right {
+    height: 40vh;
+    width: 40vw;
+    right: 4px;
+    bottom: 0px;
+    position: fixed;
+  
+    overflow: hidden;
+  }
+  
+  .info-out {
+    position: relative;
+    height: 100%;
+    width: 100%;
+   
+  }
+  
+  .info-in {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height:100%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    opacity: 0.7;
+    
+    bottom: -40vh;
+    transition: bottom 0.3s ease-in-out;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.byme{
+    right:0;
+    bottom:0;
+    position: relative;
+}
+
+  .termination-symbol {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 23px;
+    color: var(--primary-color);
+}
+.close:hover{
+    color:red;
+}
+
+/* //new users */
+  .show-info {
+    bottom: 0;
+    cursor: pointer;
+}
+  .cmd1{
+    font-style: oblique;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }

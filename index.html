@@ -111,7 +111,9 @@
 
 
     <div class="skillout">
-      
+      <div class="skillin">
+        <div class="skilltitle"></div>
+      </div>
     </div>
 
 
@@ -187,7 +189,7 @@
             <div class="project-right">
                 <div class="project-thumb">
                     <div class="project-image">
-                        <img src="P21.png" alt="heat beat">
+                        <img src="p21.png" alt="heat beat">
                     </div>
 
                 </div>
@@ -774,6 +776,9 @@ var b4 = document.getElementById('b4');
     b2.classList.toggle('b2animation');
     b3.classList.toggle('b3animation');
     b4.classList.toggle('b4animation');
+
+    
+
     
 
 
@@ -909,28 +914,56 @@ function processText(transcript) {
     
             else if (text.includes(scrolldown)) {
                 smoothScrollDown(4000);
+                b1.classList.toggle('b1animation');
+    b2.classList.toggle('b2animation');
+    b3.classList.toggle('b3animation');
+    b4.classList.toggle('b4animation');
             }
             else if (text.includes(scrollup)) {
                 smoothScrollUp(4000);
+                b1.classList.toggle('b1animation');
+    b2.classList.toggle('b2animation');
+    b3.classList.toggle('b3animation');
+    b4.classList.toggle('b4animation');
             }
             else if (text.includes(projects)) {
         scrollToSection("projects");
+        b1.classList.toggle('b1animation');
+    b2.classList.toggle('b2animation');
+    b3.classList.toggle('b3animation');
+    b4.classList.toggle('b4animation');
         }
 
         else if (text.includes(about)) {
         scrollToSection("enigma");
+        b1.classList.toggle('b1animation');
+    b2.classList.toggle('b2animation');
+    b3.classList.toggle('b3animation');
+    b4.classList.toggle('b4animation');
         }
         else if (text.includes(contact)) {
         scrollToSection("contact");
+        b1.classList.toggle('b1animation');
+    b2.classList.toggle('b2animation');
+    b3.classList.toggle('b3animation');
+    b4.classList.toggle('b4animation');
         }
     
 
         else if (text.includes(darkmode)) {
             toggleDarkMode();
+            b1.classList.toggle('b1animation');
+    b2.classList.toggle('b2animation');
+    b3.classList.toggle('b3animation');
+    b4.classList.toggle('b4animation');
         }
 
         else if (text.includes(changemode)) {
             toggleDarkMode();
+            b1.classList.toggle('b1animation');
+    b2.classList.toggle('b2animation');
+    b3.classList.toggle('b3animation');
+    b4.classList.toggle('b4animation');
         }
         else if (text.includes(whoru)) {
             var audio = new Audio();
@@ -960,12 +993,20 @@ function processText(transcript) {
         top: window.innerHeight, 
         behavior: 'smooth'
     });
+    b1.classList.toggle('b1animation');
+    b2.classList.toggle('b2animation');
+    b3.classList.toggle('b3animation');
+    b4.classList.toggle('b4animation');
         }
         else{
             var audio = new Audio();
     audio.src = 'else.mp3';
     audio.volume = 0.3;
     audio.play();  
+    b1.classList.toggle('b1animation');
+    b2.classList.toggle('b2animation');
+    b3.classList.toggle('b3animation');
+    b4.classList.toggle('b4animation');
         }
     
     

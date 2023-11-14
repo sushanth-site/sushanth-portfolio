@@ -28,6 +28,7 @@ body {
 
 :root {
     --skill:rgb(56, 56, 56);
+    --cmds:rgba(86, 86, 86, 0.737);
     --primary-color: #d9d9d9;
     --colourful: linear-gradient(to right, #3498db, #2c3e50, #3498db, #3c819c);
     /* --primary-color:#8f8f8f; */
@@ -41,6 +42,7 @@ body {
 }
 
 .dark-theme {
+    --cmds:rgba(214, 214, 214, 0.737);
     --skill:rgb(185, 185, 185);
     --primary-color: #151414;
     --secondary-color: white;
@@ -814,17 +816,42 @@ text {
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
-    box-shadow: 2px 2px 3px 2px rgba(0, 0, 255, 0.573);
-}
-.sk1:hover{
-    background-color: #3c819c;
+    /* box-shadow: 2px 2px 3px 2px rgba(0, 0, 255, 0.573); */
+   
 }
 
+  
 
 
-
-
-
+.echointo{
+    font-size: 18px;
+}
+.micinmanual{
+    color:var(--primary-color);
+   
+}
+.commands{
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+    height:80%;
+    padding:5px;
+}
+.cmdleft{
+    width:50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+.cmdright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -1761,4 +1788,44 @@ body::-webkit-scrollbar{
     font-style: oblique;
     font-size: 20px;
     margin-bottom: 10px;
+    min-width: 190px;
+    min-height: 30px;
+    background-color: var(--cmds);
+    border-radius: 10px 30px 10px 30px;
   }
+
+  
+.torch2{
+    display: none;
+    height:100px;
+    width:40px;
+    background-color: black;
+   border-radius: 50px 50px 2px 2px;
+    box-shadow: inset 0px 0px 0.5em 0px hsl(70, 99%, 50%),0px 0px 0.5em 0px hsl(70, 99%, 50%);
+    animation: rotate-torch2 8s linear infinite;
+    perspective: 1.6em;
+ 
+}
+
+.torch2::before{
+    content: "";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: hsl(70, 99%, 50%);
+    transform: translateY(120%) rotateX(95deg) scale(1,0.35);
+    filter: blur(2em);
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+@keyframes rotate-torch2{
+    0%{
+        transform: rotate(0%);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

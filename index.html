@@ -116,8 +116,9 @@
             <div class="skills">Skills Hub</div>
         </div>
 
-        <div class="skillcontent">
+        <div class="skillcontent shadow">
             <div class="skillrow">
+                <div class="torch2"></div>
              <div class="sk1">HTML</div>
              <div class="sk1">CSS</div>
              <div class="sk1">Javascript</div>
@@ -141,9 +142,11 @@
             
             
         </div>
+       
       </div>
     </div>
 
+    <div class="shadow">welcome</div>
 
     <div class="projects">
         <div class="quote">
@@ -217,7 +220,7 @@
             <div class="project-right">
                 <div class="project-thumb">
                     <div class="project-image">
-                        <img src="P21.png" alt="heat beat">
+                        <img src="p21.png" alt="heat beat">
                     </div>
 
                 </div>
@@ -438,15 +441,36 @@
         <div class="termination-symbol" onclick="removeInfo()"><span class="material-symbols-outlined close">
             close
             </span></div>
-        <h1>Echo Guide</h1>
-        <h4>Voice based navigation -try using commands</h4>
-        <div class="cmd1">say "Scroll down"</div>
+
+        <!-- <h1>Echo Guide</h1>
+        <h4>Voice based navigation -try using commands</h4> -->
+        <div class="echointo">Hey, I'm Echo Guide  <br> Just tap  <span class="material-symbols-outlined micinmanual" > 
+            mic
+            </span> symbol and pronounce commands</div>
+
+            <div class="commands">
+                <div class="cmdleft">
+                    <div class="cmd1">"who are you"</div>
+                    <div class="cmd1">"what can you do"</div>
+                    <div class="cmd1">"creator"</div>
+                    <div class="cmd1">"give intro"</div>
+                    <div class="cmd1">"light the skill"</div>
+                </div>
+                <div class="cmdright">
+                    <div class="cmd1">"projects"</div>
+                    <div class="cmd1">"about"</div>
+                    <div class="cmd1">"skills"</div>
+                    <div class="cmd1">"contact"</div>
+                    <div class="cmd1">"scroll down/up"</div>
+                </div>
+            </div>
+        <!-- <div class="cmd1">say "Scroll down"</div>
         <div class="cmd1">say "Who are you"</div>
         <div class="cmd1">say "what can you do"</div>
         <div class="cmd1">say "About"</div>
         <div class="cmd1">say "Projects"</div>
         <div class="cmd1">say "contact"</div>
-        <div class="byme">Created by : Sushanth</div>
+        <div class="byme">Created by : Sushanth</div> -->
 
     </div>
 </div>
@@ -923,6 +947,9 @@ function processText(transcript) {
             const whoru= "who are you";
             const whatcanudo = "what can you do";
             const skills= "skills";
+            const creator = "creator";
+            const lighttheskill= "light the skill";
+            const intro = "intro";
          
     
             if (text.includes(setColorCommand)) {
@@ -982,6 +1009,41 @@ function processText(transcript) {
         scrollToSection("skills");
         }
 
+
+        else if (text.includes(intro)) {
+            smoothScrollUp(4000);
+            var audio = new Audio();
+    audio.src = 'intro.mp3';
+    audio.volume = 0.4;
+    audio.play();
+    audio.onended = function() {
+    voice();
+        }
+
+        }
+        else if (text.includes(lighttheskill)) {
+            scrollToSection("skills");
+            var torch2 = document.querySelector('.torch2');
+    if (torch2) {
+        toggleDarkMode();
+        torch2.style.display = 'block';
+        setTimeout(function() {
+            torch2.style.display = 'none'; 
+            toggleDarkMode();
+        }, 10000); 
+    }
+        }
+
+
+        else if (text.includes(creator)) {
+            var audio = new Audio();
+    audio.src = 'creator.mp3';
+    audio.volume = 0.6;
+    audio.play();
+    audio.onended = function() {
+    voice();
+        }
+    }
 
 
         else if (text.includes(darkmode)) {

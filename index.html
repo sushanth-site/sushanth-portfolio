@@ -68,15 +68,20 @@
 
 
     <div class="space">
-        <div class="status">
-            <div class="status1">CURRENT STATUS</div>
-            <div class="status2">Computer Science Engineering in B.M.S College of Engineering</div>
-        </div>
+         <div class="status">
+            <div class="status_wrapper">
+                <div class="status1">CURRENT STATUS</div>
+                 <div class="status2">Computer Science Engineering in B.M.S College of Engineering</div>
+            </div>
+            
+        </div> 
         <div class="space1">
             <div class="space2">WEB</div>
             <div class="space3">DEVELOPER</div>
-        </div>
+        </div> 
     </div>
+
+    
 
     <div class="art">
         <div class="artbox">
@@ -85,7 +90,16 @@
                     <div class="artround2"></div>
                 </div>
 
-                <div class="directionball"></div>
+                <div class="directionball">
+                    <div class="timer "  id="timer">
+                        12:12
+                    </div>
+
+                    <div class="greet" id="greet">
+                        Hi
+                    </div>
+                </div> 
+                
             </div>
         </div>
     </div>
@@ -98,13 +112,13 @@
                 <div class="spi0">SPECIALIZED</div>
             </div>
             <div class="sp1">
-                <div class="spi1">IN WEBSITE</div>
+                <div class="spi1">IN FULLSTACK</div>
             </div>
             <div class="sp2">
                 <div class="spi2">AND DESIGN</div>
             </div>
             <div class="sp3">
-                <div class="spi3">SYSTEM</div>
+                <div class="spi3"></div>
             </div>
         </div>
     </div>
@@ -136,6 +150,10 @@
 
             <div class="skillrow">
                 <div class="sk1">Python</div>
+                <div class="sk1">Flutter</div>
+                <div class="sk1">Firebase</div>
+
+
                
             </div>
 
@@ -175,6 +193,10 @@
         </div>
     </div>
 
+
+
+
+    
     <div class="extra"></div>
     <div class="pjct1">
         <div class="horizontalline"></div>
@@ -220,7 +242,7 @@
             <div class="project-right">
                 <div class="project-thumb">
                     <div class="project-image">
-                        <img src="P21.png" alt="heat beat">
+                        <img src="p21.png" alt="heat beat">
                     </div>
 
                 </div>
@@ -342,7 +364,55 @@
 
     </div>
 
-    <div class="extra"></div>
+    <br><br><br><br>
+
+<div class="gsapbp">
+
+    <div class="Galleria">
+        <div class="galleria-text">GALLORIA</div>
+    </div>
+    <div class="gsapcontainer">
+
+        <section class="panel">
+         <div class="panel-cont">
+
+            <div class="panel-card">
+               <img src="Screenshot 2023-12-24 013145.png" alt="">
+            </div>
+            <div class="panel-card"><img src="Screenshot 2023-12-24 014716.png" alt=""></div>
+            <div class="panel-card"><img src="P21.png" alt=""></div>
+      
+         </div>
+        </section>
+
+        <section class="panel">
+         
+         <div class="panel-cont">
+            <div class="panel-card"><img src="P41.png" alt=""></div>
+            <div class="panel-card"><img src="https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            <div class="panel-card"><img src="https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+         </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-cont">
+                <div class="panel-card"><img src="https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="panel-card"><img src="https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="panel-card"><img src="https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            </div>
+        </section>
+        
+      </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="extras"></div>
 
     <div class="letstalkouter" id="contact">
         <div class="letstalk_container">
@@ -410,7 +480,7 @@
             </div>
         </div>
     </div>
-    <div class="extra">
+    <div class="extras">
 
     </div>
 
@@ -1136,7 +1206,63 @@ function processText(transcript) {
 </script>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
 
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray(".panel");
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".gsapbp",
+    pin: true,
+    scrub: 1,
+    // snap: 1 / (sections.length - 1),
+    end: () => "+=" + document.querySelector(".gsapbp").offsetWidth
+  }
+});
+</script>
+<!-- timer -->
+<script>
+function updateTimer() {
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+    document.getElementById('timer').innerText = hours + ':' + minutes + ':' + seconds;
+}
+setInterval(updateTimer, 1000);
+updateTimer();
+</script>
+
+<script>
+    function updateGreet() {
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+
+    var greetMessage;
+
+    if (hours < 12) {
+        greetMessage = 'Good morning';
+    } else if (hours < 18) {
+        greetMessage = 'Good afternoon';
+    } else {
+        greetMessage = 'Good evening';
+    }
+
+    document.getElementById('greet').innerText = greetMessage;
+}
+updateGreet();
+
+</script>
 </body>
 
 </html>

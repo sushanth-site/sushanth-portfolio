@@ -19,6 +19,7 @@ html {
 }
 
 body {
+    height: 100%;
     background-color: var(--primary-color);
     margin: 0;
     padding: 0;
@@ -847,12 +848,9 @@ text {
     justify-content: space-evenly;
     align-items: center;
 }
-
 .sk1 {
     height: 70px;
-    /* background-color: var(--skill); */
     background: linear-gradient(to right, #3498db, #4e769c, #3498db, #3c819c);
-    /* color: var(--primary-color); */
     color: black;
     min-width: 150px;
     text-align: center;
@@ -862,8 +860,15 @@ text {
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
-    /* box-shadow: 2px 2px 3px 2px rgba(0, 0, 255, 0.573); */
-
+    position: relative; /* Ensure the crown icon is positioned relative to this div */
+}
+.star-icon {
+    position: absolute;
+    top: -10px; /* Adjust as needed */
+    left: -10px; /* Adjust as needed */
+    font-size: 24px; /* Adjust the size as needed */
+    color: gold; /* Adjust the color as needed */
+    transform: rotate(-14deg);
 }
 
 
@@ -1069,7 +1074,7 @@ text {
 
 .extra {
     width: 100%;
-    height: 300px;
+    height: 100px;
     transition: background-color 0.3s ease-out;
 }
 
@@ -1126,17 +1131,16 @@ text {
 .project-content {
     height: 600px;
     width: 100%;
-    /* background-color: orange; */
     display: flex;
     flex-direction: row;
 }
 
 .project-left {
-    /* background-color: cadetblue; */
     height: 100%;
     width: 40%;
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     color: var(--special);
 }
 
@@ -1160,21 +1164,105 @@ text {
     /* background-color: red; */
 }
 
-.custom-cursor {}
-
 .project-name-container {
-    height: max-content;
-    width: 100%;
-    /* background-color: crimson; */
-    margin-bottom: 90px;
+    height: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    /* align-items: flex-end; */
-    font-size: 70px;
-    font-weight: 100;
+    align-items: center; /* Center aligns all child elements */
     color: var(--special);
-
+    justify-content: space-evenly;
 }
+
+.project-name {
+    text-align: center;
+    font-size: 40px; /* Adjust as needed for visibility */
+    font-weight: 400; /* Makes the project name stand out */
+    line-height: 1.2; /* Adjust the line-height for spacing between lines */
+    font-family: "Noto Serif", serif;
+    margin-bottom: 20px; /* Adds space between the name and other content */
+}
+
+.project-description-detailed {
+    width: 70%;
+    font-size: 20px; /* Adjust as needed */
+    font-weight: normal; /* Normal font weight for the description */
+    margin-top: 20px; /* Adds space between the name and description */
+    padding: 0 20px; /* Adds horizontal padding for better readability */
+    font-family: "Noto Serif", serif;
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+
+
+
+
+
+
+.links-to-out{
+    height: 40%;
+    width: 40%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: -100px;
+}
+.links-to-out {
+    display: flex;
+    gap: 10px; /* Adds space between the buttons */
+}
+
+
+
+.link-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.visit, .github-repo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: 1px 1px 0.5px 0.5px rgba(148, 148, 148, 0.91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    color: white; /* Ensures the arrow symbol and GitHub icon are visible */
+    font-size: 24px; /* Adjusts the size of the arrow symbol and GitHub icon */
+}
+
+.visit::before, .github-repo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: all 0.4s ease;
+    transform: translateX(-100%);
+}
+
+.visit:hover::before, .github-repo:hover::before {
+    transform: translateX(100%);
+}
+
+.visit:hover, .github-repo:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 
 .project-name1 {
     text-align: left;
@@ -1843,7 +1931,8 @@ body::-webkit-scrollbar {}
     right: 4px;
     bottom: 0px;
     position: fixed;
-
+z-index: -99999;
+display: none;
     overflow: hidden;
 }
 
@@ -2490,4 +2579,42 @@ cursor: pointer;
     align-items: center;
     font-size:1.2rem;
     font-weight: 400;
+}
+
+
+
+.viewprojectimages {
+    height: 70vh;
+    width: 70vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    flex-direction: column;
+}
+
+.project-image {
+    cursor: pointer;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: red;
 }

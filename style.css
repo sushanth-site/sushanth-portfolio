@@ -35,6 +35,8 @@ body {
     --colourful: linear-gradient(to right, #3498db, #2c3e50, #3498db, #3c819c);
     /* --primary-color:#8f8f8f; */
     --secondary-color: black;
+    --secondary-color5:rgba(19, 19, 19, 0.481);
+
     --inda: #8f8f8f;
     --special: black;
     --ball: #151414;
@@ -54,7 +56,7 @@ body {
     --ball: white;
     --contact: rgba(27, 27, 27, 0.77);
     --footer: #b4b4b4cb;
-
+    --secondary-color5:rgba(199, 199, 199, 0.481);
     --echoguidebg: #c9c7c7;
 }
 
@@ -1152,16 +1154,21 @@ text {
     justify-content: center;
     align-items: center;
     position: relative;
-
+border-radius: 15px;
+}
+.viewmoreimg{
+    height: 100px;
+    width: 100px;
+    position: absolute;
 }
 
 .project-thumb {
     height: 90%;
     width: 90%;
     border-radius: 5%;
-
+overflow: hidden;
     position: relative;
-    /* background-color: red; */
+    background-color: red;
 }
 
 .project-name-container {
@@ -1931,8 +1938,8 @@ body::-webkit-scrollbar {}
     right: 4px;
     bottom: 0px;
     position: fixed;
-z-index: -99999;
-display: none;
+/* z-index: -99999; */
+/* display: none; */
     overflow: hidden;
 }
 
@@ -1948,11 +1955,11 @@ display: none;
     text-align: center;
     width: 100%;
     height: 100%;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color5);
     border-radius: 10px;
     opacity: 0.7;
 
-    bottom: -40vh;
+    bottom: -36vh;
     transition: bottom 0.3s ease-in-out;
     color: var(--primary-color);
     display: flex;
@@ -2581,8 +2588,9 @@ cursor: pointer;
     font-weight: 400;
 }
 
-
-
+.project-image {
+    cursor: pointer;
+}
 .viewprojectimages {
     height: 70vh;
     width: 70vw;
@@ -2590,18 +2598,48 @@ cursor: pointer;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #2c3e50;
+    background-color: #2c3e5071;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none; /* Initially hidden */
-    flex-direction: column;
+    display: none; 
 }
 
-.project-image {
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.image-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.image-nav button {
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 24px;
     cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 .close-button {
@@ -2610,11 +2648,64 @@ cursor: pointer;
     right: 10px;
     background-color: transparent;
     border: none;
-    color: white;
-    font-size: 24px;
+    color: rgb(19, 3, 242);
+    font-size: 50px;
     cursor: pointer;
 }
 
 .close-button:hover {
     color: red;
 }
+
+
+.project-right:hover .clicktoseemorel {
+    transform: translateX(-120px); /* Slide to the left when hovered */
+    
+}
+
+.clicktoseemorel {
+    height: 70%; /* Adjust as needed */
+    width: 70%; /* Adjust as needed */
+    border-radius: 5%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    position: absolute;
+    transform: translateX(0); /* Initially hidden */
+    transition: transform 0.3s ease; /* Smooth transition for transform property */
+    z-index: -11; /* Ensure it appears above other content */
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    white-space: nowrap;
+text-align: center;
+padding: 3px;
+}
+
+.project-right:hover .clicktoseemorer {
+    transform: translateX(120px); /* Slide to the left when hovered */
+    
+}
+
+.clicktoseemorer {
+    height: 70%; /* Adjust as needed */
+    width: 70%; /* Adjust as needed */
+    border-radius: 5%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    position: absolute;
+    transform: translateX(0); /* Initially hidden */
+    transition: transform 0.3s ease; /* Smooth transition for transform property */
+    z-index: -11; /* Ensure it appears above other content */
+    writing-mode: vertical-lr;
+    /* text-orientation: sideways; */
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+text-align:center;
+padding: 3px;
+}
+
+
+
+
+

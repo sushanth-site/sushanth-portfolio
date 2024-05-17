@@ -250,12 +250,12 @@
             </div>
             
             <div class="project-right">
+                <div class="clicktoseemorel">Click to see more images</div>
                 <div class="project-thumb">
                     <div class="project-image" id="seeimages" value="1">
                         <img src="roundandround.png" alt="heat beat" class="customsush">
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -274,6 +274,7 @@
         <div class="project-content">
 
             <div class="project-right">
+                <div class="clicktoseemorer">Click to see more images</div>
                 <div class="project-thumb">
                     <div class="project-image" id="seeimages" value="2">
                         <img src="grouptalks.png" alt="heat beat">
@@ -351,6 +352,7 @@
             </div>
             
             <div class="project-right">
+                <div class="clicktoseemorel">Click to see more images</div>
                 <div class="project-thumb">
                     <div class="project-image" id="seeimages" value="3">
                         <img src="p11.png" alt="heat beat" class="customsush">
@@ -375,6 +377,7 @@
         <div class="project-content">
 
             <div class="project-right">
+                <div class="clicktoseemorer">Click to see more images</div>
                 <div class="project-thumb">
                     <div class="project-image" id="seeimages" value="4">
                         <img src="humanverify.png" alt="heat beat">
@@ -393,7 +396,7 @@
                         Frontend for a fruit shop and delivery system, emphasizing sleek aesthetics and captivating scroll interactions. Incorporating smooth navigation, dynamic visuals, interactive product showcases, and intuitive delivery information. Focused on modern design principles and seamless user experience
                     </div>
                     <div class="links-to-out">
-                        <a href="https://hebris-human-validations.onrender.com/" target="_blank" class="link-wrapper">
+                        <a href="https://sushanth-hebri.github.io/Testing-Human-validation-api/" target="_blank" class="link-wrapper">
                             <div class="visit">
                                 &#8599;
                             </div>
@@ -451,6 +454,7 @@
             </div>
             
             <div class="project-right">
+                <div class="clicktoseemorel">Click to see more images</div>
                 <div class="project-thumb">
                     <div class="project-image" id="seeimages" value="5">
                         <img src="tmdb.png" alt="heat beat" class="customsush">
@@ -475,6 +479,7 @@
         <div class="project-content">
 
             <div class="project-right">
+                <div class="clicktoseemorer">Click to see more images</div>
                 <div class="project-thumb">
                     <div class="project-image" id="seeimages" value="6">
                         <img src="vizmusic.png" alt="heat beat">
@@ -543,6 +548,7 @@
                 </div>
             </div>
             <div class="project-right">
+                <div class="clicktoseemorel">Click to see more images</div>
                 <div class="project-thumb">
                     <div class="project-image" id="seeimages" value="7">
                         <img src="weatherapi.png" alt="heat beat">
@@ -566,6 +572,7 @@
         <div class="project-content">
 
             <div class="project-right">
+                <div class="clicktoseemorer">Click to see more images</div>
                 <div class="project-thumb">
                     <div class="project-image" id="seeimages" value="8">
                         <img src="P21.png" alt="heat beat">
@@ -624,7 +631,7 @@
                         My first portfolio, a simple and elegant design with a focus on user experience. The site features a clean grid layout, smooth transitions. The project showcases my early web development skills and design principles.
                     </div>
                     <div class="links-to-out">
-                        <a href="https://sushanth-hebri.github.io/Sushanth_portfolio.github.io/" target="_blank" class="link-wrapper">
+                        <a href="" target="_blank" class="link-wrapper">
                             <div class="visit">
                                 &#8599;
                             </div>
@@ -638,6 +645,7 @@
                 </div>
             </div>
             <div class="project-right">
+                <div class="clicktoseemorel">Click to see more images</div>
                 <div class="project-thumb">
                     <div class="project-image" id="seeimages" value="9">
                         <img src="p31.png" alt="heat beat">
@@ -661,6 +669,7 @@
         <div class="project-content">
 
             <div class="project-right">
+                <div class="clicktoseemorer">Click to see more images</div>
                 <div class="project-thumb">
                     <div class="project-image" id="seeimages" value="10">
                         <img src="P41.png" alt="heat beat">
@@ -766,7 +775,7 @@
                     <div class="panel-image-desc">Visualizer that synced with song.
                     </div>
                 </div>
-               <img src="Screenshot 2023-12-24 014716.png" alt="">
+               <img src="p11.png" alt="">
             </div>
             
 
@@ -933,8 +942,8 @@
 <div class="micinfo-right">
 <div class="info-out">
     <div class="info-in" id="infoIn">
-        <div class="termination-symbol" onclick="removeInfo()"><span class="material-symbols-outlined close">
-            close
+        <div class="termination-symbol" onclick="removeInfo()"><span class="material-symbols-outlined close" id="toggleArrow">
+            keyboard_arrow_up
             </span></div>
 
         <!-- <h1>Echo Guide</h1>
@@ -991,9 +1000,17 @@
 
 
         <div class="viewprojectimages" id="imageModal">
+            <div class="image-container">
+                <img id="currentImage" src="" alt="Project Image">
+            </div>
             <button class="close-button" id="closeModal">&times;</button>
-            <p id="imageValue"></p>
+
+            <div class="image-nav">
+                <button id="prevButton">&lt;</button>
+                <button id="nextButton">&gt;</button>
+            </div>
         </div>
+        
     
 
 
@@ -1650,11 +1667,19 @@ function processText(transcript) {
 
 
 <script>
-    // remove new user guide
-    function removeInfo() {
-    var infoIn = document.getElementById('infoIn');
-    infoIn.classList.remove('show-info');
-}
+  
+  function removeInfo() {
+            var infoIn = document.getElementById('infoIn');
+            var toggleArrow = document.getElementById('toggleArrow');
+            infoIn.classList.toggle('show-info');
+            
+            if (infoIn.classList.contains('show-info')) {
+                toggleArrow.textContent = 'expand_more';
+              
+            } else {
+                toggleArrow.textContent = ' keyboard_arrow_up'; // Up arrow  
+            }
+        }
 </script>
 
 
@@ -1715,21 +1740,75 @@ updateTimer();
 updateGreet();
 
 </script>
- <script>
-        document.querySelectorAll('.project-image').forEach(function(element) {
-            element.addEventListener('click', function() {
-                var value = this.getAttribute('value');
-                var modal = document.getElementById('imageModal');
-                document.getElementById('imageValue').textContent = 'Value: ' + value;
-                modal.style.display = 'flex'; // Change to 'flex' to show the modal
-            });
+ 
+
+
+
+
+
+
+
+
+
+<script>
+    document.querySelectorAll('.project-image').forEach(function(element) {
+        element.addEventListener('click', function() {
+            var value = this.getAttribute('value');
+            var modal = document.getElementById('imageModal');
+            // document.getElementById('imageValue').textContent = 'Value: ' + value;
+            modal.style.display = 'flex'; // Change to 'flex' to show the modal
+            loadImages(value);
+        });
+    });
+
+    document.getElementById('closeModal').addEventListener('click', function() {
+    var modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+});
+
+
+    function loadImages(value) {
+        var imagesData = {
+            "1": ["roundandround.png","roundsignup.png","roundsignin.png","roundhome.png","roundgenre.png","roundgenrecard.png","roundstory.png"],
+            "2": ["grouptalks.png","grouptalksignup.png","grouptalksignin.png","grouptalkchat.png"],
+            "3": ["heatbeat.png","heatbeatsignup.png","heatbeatlogin.png","heatbeathome.png","heatbeatcard.png","heatbeatplaylist.jpeg","heatbeatplayer.png"],
+            "4": ["hebrishuman.png","hebrisnothuman.png"],
+            "5": ["tmdb.png"],
+            "6": ["vizmusicplayer.png"],
+            "7": ["weatherapi.png"],
+            "8": ["fruitcartshop.png"],
+            "9": ["p31.png"],
+            "10": ["P41.png"],
+            // Add more ID numbers with image lists as needed
+        };
+
+        var currentArray = imagesData[value] || [];
+        var currentIndex = 0;
+
+        var modal = document.getElementById('imageModal');
+        var currentImage = document.getElementById('currentImage');
+        var prevButton = document.getElementById('prevButton');
+        var nextButton = document.getElementById('nextButton');
+
+        function showImage(index) {
+            currentImage.src = currentArray[index];
+            currentIndex = index;
+        }
+
+        prevButton.addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + currentArray.length) % currentArray.length;
+            showImage(currentIndex);
         });
 
-        document.getElementById('closeModal').addEventListener('click', function() {
-            var modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
+        nextButton.addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % currentArray.length;
+            showImage(currentIndex);
         });
-    </script>
+
+        showImage(0);
+    }
+</script>
+    
 </body>
 
 </html>

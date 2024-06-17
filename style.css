@@ -26,8 +26,29 @@ body {
     transition: background-color 0.3s ease-out;
     /* font-family: 'Poppins', sans-serif; */
     font-family: 'Roboto', sans-serif;
+    
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+    height: 1px;
+    transition: background-color 0.3s ease-out;
+    }
+    ::-webkit-scrollbar-track-piece  {
+    background-color:var(--primary-color);
+    transition: background-color 0.3s ease-out;
+    }
+    ::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #0A4C95;
+    transition: background-color 0.3s ease-out;
+    }
+
+    .certificate {
+        color:var(--secondary-color) !important;
+    }
 :root {
     --skill: rgb(56, 56, 56);
     --cmds: rgba(86, 86, 86, 0.737);
@@ -653,13 +674,167 @@ text {
 
 }
 
-.art {
+/* .art {
     min-height: 100vh;
-    /* background-color: blue; */
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+} */
+.art {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:var(--primary-color);
+    border-radius: 8px;
 }
+
+.hingeleft {
+    padding: 20px;
+    background-color:var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.experience h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+.cer-bg{
+    box-shadow: 0 4px 8px rgba(118, 161, 235, 0.622) !important;
+}
+.card {
+    display: flex;
+    align-items: center;
+    background-color: var(--contact);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.certificateimg{
+    height: 90%;
+    width: 15%;
+    object-fit: cover;
+}
+.certificateimg img{
+    height: 100%;
+    width: 100%;
+}
+.card-content-certificate {
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 16px;
+    /* color: #555; */
+    color: var(--secondary-color);
+}
+
+.card p strong {
+color: var(--secondary-color5);
+}
+
+.card ol {
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.card ol li {
+    margin: 5px 0;
+}
+.github-link {
+    display: inline-block;
+    margin-left: 10px;
+    color: #333; /* Change color as per your design */
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #007bff; /* Change hover color as per your design */
+}
+
+.github-link i {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+.experience {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.experience h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.internship {
+    margin-bottom: 20px;
+}
+
+.internship h3 {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.internship p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.internship p strong {
+    color: #555;
+}
+
+.internship ol {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.internship ol li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
 
 .status {
     height: 20%;
